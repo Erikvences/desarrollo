@@ -35,7 +35,7 @@ public class SensoresController {
 	}
 	
 	@GetMapping("ultimo")
-    public Producto obtenerUltimoProducto() {
+    public Sensores obtenerUltimoProducto() {
         return sensoresRepository.findTopByOrderByIdDesc();
     }
 
