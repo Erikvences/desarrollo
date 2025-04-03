@@ -39,5 +39,26 @@ public class SensoresController {
         return sensoresRepository.findTopByOrderByIdDesc();
     }
 
+	@GetMapping("estadisticas")
+    public Map<String, Double> getEstadisticas() {
+        Map<String, Double> estadisticas = new HashMap<>();
+        
+        estadisticas.put("maxHumedad", sensorDataRepository.findMaxHumedad());
+        estadisticas.put("maxTemperatura", sensorDataRepository.findMaxTemperatura());
+        estadisticas.put("maxParticulas", sensorDataRepository.findMaxParticulas());
+        
+        estadisticas.put("minHumedad", sensorDataRepository.findMinHumedad());
+        estadisticas.put("minTemperatura", sensorDataRepository.findMinTemperatura());
+        estadisticas.put("minParticulas", sensorDataRepository.findMinParticulas());
+        
+        estadisticas.put("avgHumedad", sensorDataRepository.findAvgHumedad());
+        estadisticas.put("avgTemperatura", sensorDataRepository.findAvgTemperatura());
+        estadisticas.put("avgParticulas", sensorDataRepository.findAvgParticulas());
+        
+        estadisticas.put("ultimaLlama", sensorDataRepository.findUltimaFamaA());
+
+        return estadisticas;
+    }
+
 
 }
