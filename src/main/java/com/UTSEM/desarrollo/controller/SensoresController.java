@@ -41,7 +41,7 @@ public class SensoresController {
 
 	@GetMapping("estadisticas")
     public Map<String, Double> getEstadisticas() {
-        Map<String, Double> estadisticas = new HashMap<>();
+        Map<String, Double> estadisticas = new Map();
         
         estadisticas.put("maxHumedad", sensoresRepository.findMaxHumedad());
         estadisticas.put("maxTemperatura", sensoresRepository.findMaxTemperatura());
