@@ -31,7 +31,7 @@ public class SensoresController {
 	
 	@GetMapping("listar")
 	public List<Sensores> listar() {
-		return sensoresRepository.findAll().reversed();
+		return sensoresRepository.findAll();
 	}
 	
 	@GetMapping("ultimo")
