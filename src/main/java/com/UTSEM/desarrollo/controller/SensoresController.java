@@ -43,19 +43,19 @@ public class SensoresController {
     public Map<String, Double> getEstadisticas() {
         Map<String, Double> estadisticas = new HashMap<>();
         
-        estadisticas.put("maxHumedad", sensorDataRepository.findMaxHumedad());
-        estadisticas.put("maxTemperatura", sensorDataRepository.findMaxTemperatura());
-        estadisticas.put("maxParticulas", sensorDataRepository.findMaxParticulas());
+        estadisticas.put("maxHumedad", sensoresRepository.findMaxHumedad());
+        estadisticas.put("maxTemperatura", sensoresRepository.findMaxTemperatura());
+        estadisticas.put("maxParticulas", sensoresRepository.findMaxParticulas());
         
-        estadisticas.put("minHumedad", sensorDataRepository.findMinHumedad());
-        estadisticas.put("minTemperatura", sensorDataRepository.findMinTemperatura());
-        estadisticas.put("minParticulas", sensorDataRepository.findMinParticulas());
+        estadisticas.put("minHumedad", sensoresRepository.findMinHumedad());
+        estadisticas.put("minTemperatura", sensoresRepository.findMinTemperatura());
+        estadisticas.put("minParticulas", sensoresRepository.findMinParticulas());
         
-        estadisticas.put("avgHumedad", sensorDataRepository.findAvgHumedad());
-        estadisticas.put("avgTemperatura", sensorDataRepository.findAvgTemperatura());
-        estadisticas.put("avgParticulas", sensorDataRepository.findAvgParticulas());
+        estadisticas.put("avgHumedad", sensoresRepository.findAvgHumedad());
+        estadisticas.put("avgTemperatura", sensoresRepository.findAvgTemperatura());
+        estadisticas.put("avgParticulas", sensoresRepository.findAvgParticulas());
         
-        estadisticas.put("ultimaLlama", sensorDataRepository.findUltimaFamaA());
+        estadisticas.put("ultimaLlama", sensoresRepository.findUltimaFamaA());
 
         return estadisticas;
     }
